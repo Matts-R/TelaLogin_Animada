@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    /* Tamanho da margem do elemento body */
+    padding: 100%;
+    /* Espaçamento do elemento */
+    font-family: sans-serif;
+    /* Especifica um estilo de fonte */
+    background: #34495e;
+    /* Definindo a cor de fonte */
+}
+
+.box {
+    width: 300px;
+    /* A largura do elemento 'box' */
+    padding: 40px;
+    /* O tamanho do espaçamento dentro da 'caixa' */
+    position: absolute;
+    /* Essa propriedade define o posicionamento do elemento, o valor absolute calcula o espaço "livre" em cima, em baixo, à esquerda e à direita e com base nisso determina a posição do elemento no documento */
+    top: 50%;
+    left: 50%;
+    /* Configurando à distância em cima e à esquerda em 50%, com esses valores a propriedade position vai poder calcular exatamente o posicionamento bem no centro da página */
+    transform: translate(-50%, -50%);
+    /* A propriedade transform permite aplicar algum tipo de função nos eixos x, y e z do elemento, isso possibilita a utilização de efeitos 2d e 3d, mudando os eixos do elemento:
+    Nesse caso o valor translate simplesmente move o elemento nos eixos x e y  */
+    background: #191919;
+    text-align: center;
+    /* Alinhando os textos no centro */
+}
+
+.box h1 {
+    color: white;
+    text-transform: uppercase;
+    /* Configura todos os textos dentro de h1 para ficarem em maiúsculos */
+    font-weight: 500;
+
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    /* Especificando que somente os input do tipo text e password serão selecionados */
+    border: 0;
+    /* Zerando o valor da borda, dessa maneira o elemento não terá nenhuma */
+    background: none;
+    /* Definindo que o fundo dos inputs não terõa nenhuma decoração */
+    display: block;
+    /* Usando o display: block, estamos definindo que o elemento 'existe dentro de uma caixa', o que torna a manuseio e seu posicionamento mais fácil */
+    margin: 20px auto;
+    /* Definindo a margem de cada input */
+    text-align: center;
+    /* O text-align determina o alinhamento do texto dentro do input, que nesse caso fará com que todo o texto seja alocado no meio dele */
+    border: 2px solid #3498db;
+    /* Definindo uma pequena borda de 2 pixels, solida e de cor azul */
+    padding: 14px 10px;
+    width: 200px;
+    /* Ajustando a largura dos inputs */
+    outline: none;
+    color: white;
+    /* Cor da fonte dos textos do input */
+    border-radius: 24px;
+    /* border-radius serve para arredondar as bordas de um elemento */
+    transition: 0.25s;
+    /* transition nesse caso foi usado para configurar o tempo de uma transição que ainda será definida */
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    /* O seletor :focus serve para determinar uma ação sempre que o elementro estiver em 'foco', no caso deste input ele sempre estará em foco quando o usuário clicar nele para inserir um valor */
+    width: 280px;
+    /* Aumentando a largura quando estiver em foco */
+    border-color: #2ecc71;
+    /* Mudando a cor da bordar quando estiver em foco */
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: left;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    /* Isso irá afetar o cursor do mouse, fazendo com que o seu icone mude sempre que estiver sobre esse elemento */
+}
+
+.box input[type="submit"]:hover {
+    /* Especificando que somente os input do tipo submit serão selecionados */
+    /* O seletor :hover serve para aplicar uma ação sempre que o cursor estiver sobre o determinado elemento */
+    background-color: #2ecc71;
+    /* Nesse caso sempre que o cursor estiver sobre este input, ele mudará de cor */
+}
